@@ -55,4 +55,4 @@ class GridToolbar(QToolBar):
 
     #   Function that will change grid layout
     def onGridButtonClick(self, num1, num2):
-        self.mainWidget.populateGrid((num1, num2))
+        self.mainWidget.populateSplitters((num1, num2))

@@ -42,7 +42,7 @@ class MainWidget(QWidget):
                 #   If no more web pane widgets exist in the web pane list, create a new and add it the the grid layout
                 else:        
                     webPane = QWebEngineView()
-                    webPane.load(QUrl('https://www.tradingview.com/chart/'))
+                    webPane.load(QUrl('https://www.google.com/'))
                     self.panes.append(webPane)
                     #self.gridLayout.addWidget(webPane, x, y)
                     #   Add web pane widget to horizontal splitters

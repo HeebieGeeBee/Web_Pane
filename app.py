@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QToolBar, QAction
 from PyQt5 import Qt, QtGui
 from main_widget import MainWidget
-from toolbar import 
+from toolbar import GridToolbar
 
 
 class MainWindow(QMainWindow):

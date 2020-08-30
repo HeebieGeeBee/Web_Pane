@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QWidget, QGridLayout, QSplitter
 from PyQt5.QtWebKitWidgets import QWebView
+from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QUrl, Qt
 
 #   Class for the main widget the will be used by the main menu to display all the web panes in a grid layout
@@ -40,8 +41,8 @@ class MainWidget(QWidget):
                     index = index + 1
                 #   If no more web pane widgets exist in the web pane list, create a new and add it the the grid layout
                 else:        
-                    webPane = QWebView()
-                    webPane.load(QUrl('https://www.google.com/'))
+                    webPane = QWebEngineView()
+                    webPane.load(QUrl('https://www.tradingview.com/chart/'))
                     self.panes.append(webPane)
                     #self.gridLayout.addWidget(webPane, x, y)
                     #   Add web pane widget to horizontal splitters
@@ -55,6 +56,8 @@ class MainWidget(QWidget):
         #   Add vertical splitter to grid layout first insert new splitter widget to the from of the splitters list then add the widget to the grid layout
         self.splitters.insert(0, vertSplitters)
         self.gridLayout.addWidget(self.splitters[0])
+        
+#        del self.splitters[1:]
 
     #   Function for clearing grid layout of all web pane widgets
     def clearSplitters(self):

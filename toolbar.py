@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QToolBar, QAction
+from PyQt5.QtWidgets import QToolBar, QAction, QLineEdit
 
 #   Class for the toolbar for the main window that will handle all the grid settings, it takes pointer the the main widget as an argument
 
@@ -53,6 +53,9 @@ class GridToolbar(QToolBar):
         self.addAction(three_by_two)
         self.addAction(three_by_three)
 
+        testText = QLineEdit("test", self)
+        
+        self.addWidget(testText)
     #   Function that will change grid layout
     def onGridButtonClick(self, num1, num2):
         self.mainWidget.populateSplitters((num1, num2))
